@@ -1,0 +1,62 @@
+{
+  "accentColor": "{{appsmith.theme.colors.primaryColor}}",
+  "animateLoading": true,
+  "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+  "bottomRow": 15,
+  "boxShadow": "none",
+  "defaultOptionValue": "",
+  "dynamicBindingPathList": [
+    {
+      "key": "accentColor"
+    },
+    {
+      "key": "borderRadius"
+    }
+  ],
+  "dynamicHeight": "AUTO_HEIGHT",
+  "dynamicPropertyPathList": [
+    {
+      "key": "sourceData"
+    }
+  ],
+  "dynamicTriggerPathList": [],
+  "isDisabled": false,
+  "isFilterable": true,
+  "isLoading": false,
+  "isRequired": true,
+  "isVisible": true,
+  "key": "n8bk5w5026",
+  "labelAlignment": "left",
+  "labelPosition": "Top",
+  "labelText": "立项部门",
+  "labelTextSize": "0.875rem",
+  "labelWidth": 5,
+  "leftColumn": 52,
+  "maxDynamicHeight": 9000,
+  "minDynamicHeight": 4,
+  "minWidth": 450,
+  "mobileBottomRow": 15,
+  "mobileLeftColumn": 43,
+  "mobileRightColumn": 63,
+  "mobileTopRow": 8,
+  "needsErrorInfo": false,
+  "optionLabel": "name",
+  "optionValue": "name",
+  "originalBottomRow": 15,
+  "originalTopRow": 8,
+  "parentColumnSpace": 15.90625,
+  "parentId": "22bv6hewzs",
+  "parentRowSpace": 10,
+  "placeholderText": "Select option",
+  "renderMode": "CANVAS",
+  "responsiveBehavior": "fill",
+  "rightColumn": 64,
+  "serverSideFiltering": false,
+  "shouldScrollContents": true,
+  "sourceData": "[\n  {\n    \"name\": \"国家科技部\",\n    \"code\": \"gjkjb\"\n  },\n  {\n    \"name\": \"科技部子课题\",\n    \"code\": \"kjbzkt\"\n  },\n  {\n    \"name\": \"省科技厅\",\n    \"code\": \"skjt\"\n  },\n  {\n    \"name\": \"省财政厅\",\n    \"code\": \"sczt\"\n  },\n  {\n    \"name\": \"省委建委\",\n    \"code\": \"swjw\"\n  },\n  {\n    \"name\": \"省中医药局\",\n    \"code\": \"szyyj\"\n  },\n  {\n    \"name\": \"市科技局\",\n    \"code\": \"skjj\"\n  },\n  {\n    \"name\": \"横向课题\",\n    \"code\": \"hxkt\"\n  }\n]",
+  "topRow": 8,
+  "type": "SELECT_WIDGET",
+  "version": 1,
+  "widgetId": "xmf9fmmul8",
+  "widgetName": "sel_proDept"
+}

@@ -1,0 +1,18 @@
+SELECT 
+
+    FORMAT((total_funds_table.total_funds - COALESCE(total_pay_table.total_pay, 0)),2) AS balance
+FROM 
+    (SELECT proId, SUM(helpFee + coopFee + ownFee) AS total_funds
+     FROM feeway
+     WHERE proId = {{tbl_income_serch.selectedRow.proId}}
+     GROUP BY proId) AS total_funds_table
+LEFT JOIN 
+    (SELECT proId, SUM(payFee) AS total_pay
+     FROM feeout
+     WHERE proId = {{tbl_income_serch.selectedRow.proId}}
+		 AND del_flag='0'
+     GROUP BY proId) AS total_pay_table
+ON 
+    total_funds_table.proId = total_pay_table.proId
+WHERE 
+    total_funds_table.proId = {{tbl_income_serch.selectedRow.proId}};

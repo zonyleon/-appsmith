@@ -1,0 +1,2 @@
+SELECT COUNT(*) from feeway WHERE proId LIKE '%{{tbl_feeout.searchText}}%' 
+or proName LIKE '%{{tbl_feeout.searchText}}%' and del_flag='0';

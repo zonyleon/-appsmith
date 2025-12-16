@@ -1,0 +1,1 @@
+INSERT INTO feeway (proName,proId,proDept,helpFee,coopFee,ownFee) VALUES ('{{(tbl_feeincome.newRow || {}).proName}}','{{(tbl_feeincome.newRow || {}).proId}}','{{(tbl_feeincome.newRow || {}).proDept}}','{{(tbl_feeincome.newRow || {}).helpFee}}','{{(tbl_feeincome.newRow || {}).coopFee}}','{{(tbl_feeincome.newRow || {}).ownFee}}')

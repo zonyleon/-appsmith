@@ -1,0 +1,63 @@
+{
+  "allowedFileTypes": [
+    "image/*",
+    "*"
+  ],
+  "animateLoading": true,
+  "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+  "bottomRow": 66,
+  "boxShadow": "none",
+  "buttonColor": "{{appsmith.theme.colors.primaryColor}}",
+  "dynamicBindingPathList": [
+    {
+      "key": "buttonColor"
+    },
+    {
+      "key": "borderRadius"
+    }
+  ],
+  "dynamicPropertyPathList": [
+    {
+      "key": "onFilesSelected"
+    }
+  ],
+  "dynamicTriggerPathList": [
+    {
+      "key": "onFilesSelected"
+    }
+  ],
+  "dynamicTyping": true,
+  "fileDataType": "Binary",
+  "files": [],
+  "isDefaultClickDisabled": true,
+  "isDisabled": false,
+  "isLoading": false,
+  "isRequired": false,
+  "isVisible": true,
+  "key": "0g8938qt22",
+  "label": "发票上传",
+  "leftColumn": 3,
+  "maxFileSize": "5",
+  "maxNumFiles": "5",
+  "minWidth": 120,
+  "mobileBottomRow": 57,
+  "mobileLeftColumn": 4,
+  "mobileRightColumn": 20,
+  "mobileTopRow": 53,
+  "needsErrorInfo": false,
+  "onFilesSelected": "",
+  "originalBottomRow": 66,
+  "originalTopRow": 62,
+  "parentColumnSpace": 15.90625,
+  "parentId": "22bv6hewzs",
+  "parentRowSpace": 10,
+  "renderMode": "CANVAS",
+  "responsiveBehavior": "hug",
+  "rightColumn": 19,
+  "selectedFiles": [],
+  "topRow": 62,
+  "type": "FILE_PICKER_WIDGET_V2",
+  "version": 1,
+  "widgetId": "rsj9vbc2ub",
+  "widgetName": "filepick_imageUp_fapiao"
+}

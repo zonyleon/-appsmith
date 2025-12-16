@@ -1,0 +1,1 @@
+SELECT ord_no,fileLink,fileName FROM uploadfile_detail where ord_no = {{tbl_feeout.triggeredRow.ord_no}}

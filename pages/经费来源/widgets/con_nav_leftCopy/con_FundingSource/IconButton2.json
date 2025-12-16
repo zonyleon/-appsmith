@@ -1,0 +1,43 @@
+{
+  "animateLoading": true,
+  "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+  "bottomRow": 6,
+  "boxShadow": "none",
+  "buttonColor": "#15803d",
+  "buttonVariant": "SECONDARY",
+  "dynamicBindingPathList": [
+    {
+      "key": "borderRadius"
+    }
+  ],
+  "dynamicPropertyPathList": [],
+  "dynamicTriggerPathList": [
+    {
+      "key": "onClick"
+    }
+  ],
+  "iconName": "refresh",
+  "isDisabled": false,
+  "isLoading": false,
+  "isVisible": true,
+  "key": "4wzmjm7rzq",
+  "leftColumn": 58,
+  "minWidth": 50,
+  "mobileBottomRow": 7,
+  "mobileLeftColumn": 54,
+  "mobileRightColumn": 58,
+  "mobileTopRow": 3,
+  "needsErrorInfo": false,
+  "onClick": "{{resetWidget(\"tbl_feeincome\", true).then(() => {\n  Select_feeway1.run();\n});}}",
+  "parentColumnSpace": 16.95556640625,
+  "parentId": "rbda83ypaj",
+  "parentRowSpace": 10,
+  "renderMode": "CANVAS",
+  "responsiveBehavior": "hug",
+  "rightColumn": 62,
+  "topRow": 2,
+  "type": "ICON_BUTTON_WIDGET",
+  "version": 1,
+  "widgetId": "ivzx8b3f4w",
+  "widgetName": "IconButton2"
+}

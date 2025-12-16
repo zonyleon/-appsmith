@@ -1,0 +1,10 @@
+SELECT
+  proId,proName,proLeader,proDept,FORMAT(helpFee + ownFee + coopFee, 2) '总经费(元)'
+FROM
+  feeway
+WHERE
+  (proId LIKE '%{{tbl_income_serch.searchText}}%'
+	or proName LIKE '%{{tbl_income_serch.searchText}}%' or proLeader LIKE '%{{tbl_income_serch.searchText}}%' )
+	and del_flag='0'
+ORDER BY
+  {{tbl_income_serch.sortOrder.column || 'id'}} {{tbl_income_serch.sortOrder.order !== "desc" ? "" : "DESC"}}

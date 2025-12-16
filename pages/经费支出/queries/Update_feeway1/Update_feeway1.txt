@@ -1,0 +1,1 @@
+UPDATE feeway SET proName= '{{tbl_feeout.updatedRow.proName}}', proId= '{{tbl_feeout.updatedRow.proId}}', proDept= '{{tbl_feeout.updatedRow.proDept}}', helpFee= '{{tbl_feeout.updatedRow.helpFee}}', coopFee= '{{tbl_feeout.updatedRow.coopFee}}', ownFee= '{{tbl_feeout.updatedRow.ownFee}}' WHERE id= '{{tbl_feeout.updatedRow.id}}';

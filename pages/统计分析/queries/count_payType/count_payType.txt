@@ -1,0 +1,7 @@
+SELECT 
+    IF(IFNULL(payType, '') = '', '未知', payType) AS payType,
+    payFee 
+FROM 
+    feeout 
+WHERE 
+    del_flag = '0';

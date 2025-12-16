@@ -1,0 +1,22 @@
+START TRANSACTION;
+
+-- 直接获取feeout表中最新记录的proId和ord_no
+SELECT proId, ord_no INTO @proId, @ord_no 
+FROM feeout 
+WHERE id = (
+    SELECT MAX(id) 
+    FROM feeout 
+    WHERE proId = '{{ipt_outAdd_proId.text}}'
+    FOR UPDATE
+);
+
+-- 插入到uploadfile_detail表
+INSERT INTO uploadfile_detail (proId, fileLink, fileName, ord_no)
+VALUES (
+    @proId,
+    '{{JSON.stringify(api_upload_fapiao.data.response.file_urls.map(file => file.file_url))}}',
+    '{{JSON.stringify(api_upload_fapiao.data.response.file_urls.map(file => file.original_filename))}}',
+    @ord_no
+);
+
+COMMIT;

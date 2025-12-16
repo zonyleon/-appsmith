@@ -1,0 +1,17 @@
+SELECT 
+    proId,
+    CAST(SUM(total_funds) AS DECIMAL(10, 2)) AS total_funds,
+    CAST(SUM(total_pay) AS DECIMAL(10, 2)) AS total_pay,
+    CAST(SUM(total_funds - total_pay) AS DECIMAL(10, 2)) AS balance
+FROM (
+    SELECT 
+        f.proId,
+        SUM(f.helpFee + f.coopFee + f.ownFee) AS total_funds,
+        COALESCE((SELECT SUM(o.payFee) 
+                  FROM feeout o 
+                  WHERE o.proId = f.proId AND o.del_flag = '0'), 0) AS total_pay
+    FROM feeway f
+    WHERE f.del_flag = '0'
+    GROUP BY f.proId
+) AS combined_table
+GROUP BY proId;

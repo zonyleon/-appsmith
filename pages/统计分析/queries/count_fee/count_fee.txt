@@ -1,0 +1,11 @@
+SELECT 
+    CAST(total_funds_table.total_funds AS DECIMAL(10, 2)) AS total_funds,
+    CAST(COALESCE(total_pay_table.total_pay, 0) AS DECIMAL(10, 2)) AS total_pay,
+    CAST((total_funds_table.total_funds - COALESCE(total_pay_table.total_pay, 0)) AS DECIMAL(10, 2)) AS balance
+FROM 
+    (SELECT SUM(helpFee + coopFee + ownFee) AS total_funds
+     FROM feeway 
+     WHERE del_flag = '0') AS total_funds_table,
+    (SELECT SUM(payFee) AS total_pay
+     FROM feeout 
+     WHERE del_flag = '0') AS total_pay_table;

@@ -1,0 +1,10 @@
+SELECT
+  *,DATE_FORMAT(update_time, '%Y-%m-%d %H:%i:%s'), FORMAT(helpFee + ownFee + coopFee, 2) 合计
+FROM
+  feeway
+WHERE
+  (proId LIKE '%{{tbl_feeincome.searchText}}%'
+	or proName LIKE '%{{tbl_feeincome.searchText}}%')
+	and del_flag='0'
+ORDER BY
+  {{tbl_feeincome.sortOrder.column || 'id'}} {{tbl_feeincome.sortOrder.order !== "desc" ? "" : "DESC"}}

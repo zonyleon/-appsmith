@@ -1,0 +1,5 @@
+ INSERT  INTO feeway (proId,proName,proDept,proLeader,helpFee,coopFee,ownFee)
+ SELECT  '{{inp_proId.text}}','{{inp_proName.text}}','{{sel_proDept.selectedOptionValue}}','{{ipt_proLeader.text}}','{{cInput_helpfee.value}}','{{cInput_coopfee.value}}','{{cInput1_ownfee.value}}'
+  WHERE NOT EXISTS (
+    SELECT 1 FROM feeway WHERE proId ='{{inp_proId.text}}'
+)

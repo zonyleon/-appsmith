@@ -1,0 +1,62 @@
+{
+  "accentColor": "{{appsmith.theme.colors.primaryColor}}",
+  "animateLoading": true,
+  "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+  "bottomRow": 53,
+  "boxShadow": "none",
+  "defaultOptionValue": "",
+  "dynamicBindingPathList": [
+    {
+      "key": "accentColor"
+    },
+    {
+      "key": "borderRadius"
+    }
+  ],
+  "dynamicHeight": "AUTO_HEIGHT",
+  "dynamicPropertyPathList": [
+    {
+      "key": "sourceData"
+    }
+  ],
+  "dynamicTriggerPathList": [],
+  "isDisabled": false,
+  "isFilterable": true,
+  "isLoading": false,
+  "isRequired": true,
+  "isVisible": true,
+  "key": "n8bk5w5026",
+  "labelAlignment": "left",
+  "labelPosition": "Top",
+  "labelText": "支出范围",
+  "labelTextSize": "0.875rem",
+  "labelWidth": 5,
+  "leftColumn": 1,
+  "maxDynamicHeight": 9000,
+  "minDynamicHeight": 4,
+  "minWidth": 450,
+  "mobileBottomRow": 15,
+  "mobileLeftColumn": 43,
+  "mobileRightColumn": 63,
+  "mobileTopRow": 8,
+  "needsErrorInfo": false,
+  "optionLabel": "name",
+  "optionValue": "name",
+  "originalBottomRow": 53,
+  "originalTopRow": 46,
+  "parentColumnSpace": 15.90625,
+  "parentId": "22bv6hewzs",
+  "parentRowSpace": 10,
+  "placeholderText": "Select option",
+  "renderMode": "CANVAS",
+  "responsiveBehavior": "fill",
+  "rightColumn": 21,
+  "serverSideFiltering": false,
+  "shouldScrollContents": true,
+  "sourceData": "[\n  {\n    \"name\": \"设备费\",\n    \"code\": \"sbf\"\n  },\n  {\n    \"name\": \"材料费\",\n    \"code\": \"clf\"\n  },\n  {\n    \"name\": \"会议费\",\n    \"code\": \"hyf\"\n  },\n  {\n    \"name\": \"版面费\",\n    \"code\": \"bmf\"\n  },\n  {\n    \"name\": \"劳务费\",\n    \"code\": \"lwf\"\n  },\n  {\n    \"name\": \"绩效支出\",\n    \"code\": \"jxzc\"\n  },\n  {\n    \"name\": \"其他资料费\",\n    \"code\": \"qtzlf\"\n  }\n]",
+  "topRow": 46,
+  "type": "SELECT_WIDGET",
+  "version": 1,
+  "widgetId": "xmf9fmmul8",
+  "widgetName": "sel_payType"
+}

@@ -1,0 +1,11 @@
+SELECT
+  *
+FROM
+  feeout
+
+WHERE
+  (proId LIKE '%{{tbl_feeout.searchText}}%'
+	or proName LIKE '%{{tbl_feeout.searchText}}%')
+	and del_flag='0'
+	ORDER BY
+  {{tbl_feeout.sortOrder.column || 'id'}} {{tbl_feeout.sortOrder.order !== "desc" ? "" : "DESC"}}  

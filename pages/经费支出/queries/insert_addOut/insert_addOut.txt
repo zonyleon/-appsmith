@@ -1,0 +1,11 @@
+INSERT INTO feeout (proId, proName,proLeader,payType, payFee, payTime, balance_once, ord_no)
+VALUES (
+    '{{ipt_outAdd_proId.text}}',
+    '{{ipt_outAdd_proName.text}}',
+	  '{{ipt_outAdd_proLeader.text}}',
+    '{{sel_payType.selectedOptionValue}}',
+    {{cInput_payFee.value}},
+    {{moment(picker_payTime.value).format('YYYY-MM-DD HH:mm:ss')}},
+    CAST(REPLACE('{{ipt_outAdd_balance.text}}', ',', '') AS DECIMAL(10, 2)) - CAST({{cInput_payFee.value}} AS DECIMAL(10, 2)),
+    CONCAT('ORD-', UNIX_TIMESTAMP(NOW()), '-', FLOOR(RAND() * 1000000))
+)

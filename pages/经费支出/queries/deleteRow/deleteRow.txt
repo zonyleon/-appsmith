@@ -1,0 +1,1 @@
+UPDATE feeout SET del_flag='1' WHERE id = {{tbl_feeout.triggeredRow.id}}
