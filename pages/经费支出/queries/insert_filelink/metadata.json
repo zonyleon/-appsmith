@@ -5,7 +5,7 @@
   "pluginType": "DB",
   "unpublishedAction": {
     "actionConfiguration": {
-      "body": "START TRANSACTION;\n\n-- 检查记录是否存在\nSELECT COUNT(*) INTO @record_count \nFROM feeout \nWHERE proId = '{{ipt_outAdd_proId.text}}';\n\nIF @record_count = 0 THEN\n    ROLLBACK;\n    -- 记录到日志表或抛出异常\n    INSERT INTO error_log (error_message, proId, created_at)\n    VALUES ('未找到proId对应的记录', '{{ipt_outAdd_proId.text}}', NOW());\n    SIGNAL SQLSTATE '45000' SET MESSAGE_TEXT = '未找到对应的proId记录';\nELSE\n    -- 获取最新记录\n    SELECT proId, ord_no INTO @proId, @ord_no\n    FROM feeout \n    WHERE proId = '{{ipt_outAdd_proId.text}}'\n    ORDER BY id DESC \n    LIMIT 1\n    FOR UPDATE;\n\n    -- 插入新记录\n    INSERT INTO uploadfile_detail (proId, fileLink, fileName, ord_no)\n    VALUES (\n        @proId,\n        '{{JSON.stringify(api_upload_fapiao.data.response.file_urls.map(file => file.file_url))}}',\n        '{{JSON.stringify(api_upload_fapiao.data.response.file_urls.map(file => file.original_filename))}}',\n        @ord_no\n    );\n    \n    COMMIT;\nEND IF;",
+      "body": "INSERT INTO uploadfile_detail (proId, fileLink, fileName, ord_no)\nSELECT \n    proId,\n    '{{JSON.stringify(api_upload_fapiao.data.response.file_urls.map(file => file.file_url))}}',\n    '{{JSON.stringify(api_upload_fapiao.data.response.file_urls.map(file => file.original_filename))}}',\n    ord_no\nFROM feeout\nWHERE id = {{FetchLastInsertedId_feeout.data[0].LastID}};",
       "encodeParamsToggle": true,
       "paginationType": "NONE",
       "pluginSpecifiedTemplates": [

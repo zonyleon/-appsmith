@@ -3,7 +3,7 @@
   "animateLoading": true,
   "autoFocus": false,
   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
-  "bottomRow": 46,
+  "bottomRow": 48,
   "boxShadow": "none",
   "defaultText": "",
   "dynamicBindingPathList": [
@@ -50,7 +50,7 @@
   "rightColumn": 39,
   "shouldScrollContents": true,
   "showStepArrows": false,
-  "topRow": 39,
+  "topRow": 41,
   "type": "INPUT_WIDGET_V2",
   "version": 2,
   "widgetId": "rx73vasv03",

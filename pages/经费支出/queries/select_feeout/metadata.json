@@ -5,7 +5,7 @@
   "pluginType": "DB",
   "unpublishedAction": {
     "actionConfiguration": {
-      "body": "SELECT\n  *\nFROM\n  feeout\n\nWHERE\n  (proId LIKE '%{{tbl_feeout.searchText}}%'\n\tor proName LIKE '%{{tbl_feeout.searchText}}%')\n\tand del_flag='0'\n\tORDER BY\n  {{tbl_feeout.sortOrder.column || 'id'}} {{tbl_feeout.sortOrder.order !== \"desc\" ? \"\" : \"DESC\"}}  \n",
+      "body": "SELECT\n  *,\n  DATE_FORMAT(update_time, '%Y-%m-%d %H:%i:%s') as update_time_fmt\nFROM\n  feeout\nWHERE\n  (proId LIKE '%{{tbl_feeout.searchText}}%'\n\tor proName LIKE '%{{tbl_feeout.searchText}}%')\n\tand del_flag='0'\nORDER BY\n  {{tbl_feeout.sortOrder.column || 'id'}} {{tbl_feeout.sortOrder.order !== \"desc\" ? \"\" : \"DESC\"}}",
       "encodeParamsToggle": true,
       "paginationType": "NONE",
       "pluginSpecifiedTemplates": [

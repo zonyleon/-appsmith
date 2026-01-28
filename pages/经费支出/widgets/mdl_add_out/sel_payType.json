@@ -2,7 +2,7 @@
   "accentColor": "{{appsmith.theme.colors.primaryColor}}",
   "animateLoading": true,
   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
-  "bottomRow": 53,
+  "bottomRow": 55,
   "boxShadow": "none",
   "defaultOptionValue": "",
   "dynamicBindingPathList": [
@@ -54,7 +54,7 @@
   "serverSideFiltering": false,
   "shouldScrollContents": true,
   "sourceData": "[\n  {\n    \"name\": \"设备费\",\n    \"code\": \"sbf\"\n  },\n  {\n    \"name\": \"材料费\",\n    \"code\": \"clf\"\n  },\n  {\n    \"name\": \"会议费\",\n    \"code\": \"hyf\"\n  },\n  {\n    \"name\": \"版面费\",\n    \"code\": \"bmf\"\n  },\n  {\n    \"name\": \"劳务费\",\n    \"code\": \"lwf\"\n  },\n  {\n    \"name\": \"绩效支出\",\n    \"code\": \"jxzc\"\n  },\n  {\n    \"name\": \"其他资料费\",\n    \"code\": \"qtzlf\"\n  }\n]",
-  "topRow": 46,
+  "topRow": 48,
   "type": "SELECT_WIDGET",
   "version": 1,
   "widgetId": "xmf9fmmul8",
